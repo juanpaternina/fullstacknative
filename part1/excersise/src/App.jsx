@@ -1,3 +1,11 @@
+const Part = (props) => {
+  return (
+      <p>
+        {props.partName} {props.excersizeNumber}
+      </p>
+  );
+};
+
 const Header = (props) => {
   return (
     <>
@@ -7,17 +15,11 @@ const Header = (props) => {
 };
 
 const Content = (props) => {
-  return (
+  return ( 
     <>
-      <p>
-        {props.partName} {props.excersizeNumber}
-      </p>
-      <p>
-        {props.part2name} {props.parte2number}
-      </p>
-      <p>
-        {props.part3name} {props.parte3number}
-      </p>
+      <Part partName={props.partName} excersizeNumber={props.parNumber} />
+      <Part partName={props.part2name} excersizeNumber={props.parte2number} />
+      <Part partName={props.part3name} excersizeNumber={props.parte3number} />
     </>
   );
 };
